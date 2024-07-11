@@ -1,0 +1,16 @@
+#footer {
+    padding-bottom: 1rem;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--bs-light);
+    padding-left: 1rem;
+}
+
+#body {
+    height: 2000px;
+    padding-left: 1rem;
+}
+
+#navbar {
+    padding-left: 1rem;
+}
