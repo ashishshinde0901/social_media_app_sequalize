@@ -1,14 +1,18 @@
 const express = require('express')
-const {db} = require('../db/models')
-const {userRoute}= require('/users/index')
-const {postsRoute}= require('/posts')
+const {db} = require('./db/models')
+const {postsRoute}= require('./routes/posts')
+const {userRoute}= require('./routes/users')
+
 
 const app = express()
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
-app.use('api/users',userRoute)
-app.use('api/posts',postsRoute)
+app.use('/api/users',userRoute)
+app.use('/api/posts',postsRoute)
 
-app.use('/',express.static('../public'))
+app.use('/',express.static(__dirname+ '/public' +
+    ''))
 
 db.sync()
     .then(()=>{
