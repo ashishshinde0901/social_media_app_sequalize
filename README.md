@@ -19,6 +19,26 @@ flush privileges
 
 ## Project Structure
 
+### Frontend
+
+```shell
+public
+├── app
+│   └── app.js
+├── components
+├── css
+│   ├── bootstrap.min.css
+│   └── styles.css
+├── index.html
+└── js
+    ├── bootstrap.min.js
+    ├── jquery-3.7.1.js
+    ├── jquery-3.7.1.js.js
+    ├── jquery-3.7.1.min.js
+    └── popper.min.js
+```
+### Backend
+
 ```shell
 .
 ├── controllers  # functions to connect route to db operations
